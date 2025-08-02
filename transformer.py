@@ -295,34 +295,3 @@ class MaskedScaledDotProductAttention(nn.Module):
     return output, scores
 
 
-# if __name__ == "__main__":
-#     # Hyperparams
-#     vocab_size = 100
-#     context_length = 10
-#     model_dim = 32
-#     num_blocks = 2
-#     num_heads = 4
-#     hidden_dim = 64
-#     batch_size = 2
-
-#     # Dummy inputs
-#     src = torch.randint(0, vocab_size, (batch_size, context_length))
-#     tgt = torch.randint(0, vocab_size, (batch_size, context_length))
-
-#     # Create model
-#     model = Transformer(
-#         src_vocab_size=vocab_size,
-#         tgt_vocab_size=vocab_size,
-#         context_length=context_length,
-#         model_dim=model_dim,
-#         num_blocks=num_blocks,
-#         num_heads=num_heads,
-#         hidden_dim=hidden_dim
-#     )
-
-#     # Forward pass
-#     logits = model(src, tgt)  # shape: (B, T_dec, vocab_size)
-
-#     print("✅ Transformer forward pass successful")
-#     print("logits.shape =", logits.shape)  # should be (batch_size, context_length, vocab_size)
-
